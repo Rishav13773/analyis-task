@@ -31,6 +31,7 @@ Your app is ready to be deployed!
 
 **NOTE - Use the toggle button to switch between tables**
 
+
 Table 1 -
 ![Alt text for your image](./public/table1.png)
 
