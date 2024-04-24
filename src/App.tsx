@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import DataByYear from "./components/DataByYear";
+import DataByCrop from "./components/DataByCrop";
+import { Switch } from "@mantine/core";
 
-function App() {
+const App = () => {
+  const [flag, setFlag] = useState<boolean>(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Switch
+        size="xl"
+        onLabel="Year Table"
+        offLabel="Crop Table"
+        checked={flag}
+        onChange={(event) => setFlag(event.currentTarget.checked)}
+      />
+      {flag ? <DataByYear /> : <DataByCrop />}
     </div>
   );
-}
+};
 
 export default App;
