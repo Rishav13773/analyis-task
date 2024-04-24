@@ -29,6 +29,10 @@ Your app is ready to be deployed!
 
 # Tables
 
+Table 1 -
 ![Alt text for your image](./public/table1.png)
 
+Table 2 -
 ![Alt text for your image](./public/table2.png)
+
+**NOTE - Use the toggle button to switch between tables**
